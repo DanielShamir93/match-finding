@@ -3,6 +3,5 @@ export const incrementPositive = () => {
 };
 
 export const incrementNegative = () => {
-    return { type: "INCREMENT_NEGATIVE" };
+  return { type: "INCREMENT_NEGATIVE" };
 };
-  
