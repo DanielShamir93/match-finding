@@ -8,18 +8,18 @@ import dogsApi from './api.js';
 function App() {
 
   const [dogImgSrc, setDogImgSrc] = useState('');
-  const [nextImg, setNextImg] = useState(0);
 
   useEffect(() => {
-    const search = async () => {
+    getNextImage();
+  }, []);
+
+  const getNextImage = async () => {
+    try {
       const { data } = await axios.get(dogsApi);
       setDogImgSrc(data.message);
+    } catch(err) {
+      console.log(err);
     }
-    search();
-  }, [nextImg]);
-
-  const getNextImg = () => {
-    setNextImg(nextImg + 1);
   }
 
   return (
@@ -27,8 +27,8 @@ function App() {
       <Counter type="negative" />
       <Counter type="positive" />
       <img src={dogImgSrc} alt="animal-picture" width="500" />
-      <IncrementButton type="negative" nextImg={getNextImg}/>
-      <IncrementButton type="positive" nextImg={getNextImg}/>
+      <IncrementButton type="negative" nextImage={getNextImage} />
+      <IncrementButton type="positive" nextImage={getNextImage} />
     </div>
   );
 }

@@ -1,6 +1,8 @@
+import { INCREMENT_NEGATIVE } from '../actions/actionsTypes';
+
 const negativeIncrementReducer = (state = 0, action) => {
   switch (action.type) {
-    case "INCREMENT_NEGATIVE":
+    case INCREMENT_NEGATIVE:
       return state + 1;
     default:
       return state;
