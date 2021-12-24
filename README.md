@@ -1,7 +1,7 @@
 
 # match-finding
 
-A simple interactive app for preferring pictures of dogs.
+A simple interactive app for preferring pictures of dogs made to practice the React Redux library.
 
 ![](src/assets/images/app-view.png)
 
