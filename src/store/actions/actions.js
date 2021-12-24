@@ -1,6 +1,6 @@
 import { INCREMENT_NEGATIVE, INCREMENT_POSITIVE } from './actionsTypes';
 
-export const incrementPositive = (number = 1, nextImage) => {
+export const incrementPositiveAction = (number = 1, nextImage) => {
   return (dispatch, getState) => {
     nextImage().then(() => {
       dispatch({
@@ -11,7 +11,7 @@ export const incrementPositive = (number = 1, nextImage) => {
   }
 };
 
-export const incrementNegative = (number = 1, nextImage) => {
+export const incrementNegativeAction = (number = 1, nextImage) => {
   return (dispatch, getState) => {
     nextImage().then(() => {
       dispatch({
@@ -21,3 +21,14 @@ export const incrementNegative = (number = 1, nextImage) => {
     });
   }
 };
+
+export const incrementAction = (number = 1, nextImage, type) => {
+  return (dispatch, getState) => {
+    nextImage().then(() => {
+      dispatch({
+        type: type,
+        payload: number
+      })
+    });
+  }
+}

@@ -1,0 +1,27 @@
+.App {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.counter {
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+.dog-image {
+    width: 100vw;
+    height: 60vh;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: contain;
+}
+
+.increment-buttons {
+    width: 20vw;
+    display: flex;
+    justify-content: space-between;
+}
