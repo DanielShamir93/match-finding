@@ -3,7 +3,7 @@
 
 A simple interactive app for preferring pictures of dogs.
 
-![](assets/images/app-view.png)
+![](src/assets/images/app-view.png)
 
 ## :technologist: Languages
 
